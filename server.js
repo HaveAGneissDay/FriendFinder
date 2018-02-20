@@ -28,3 +28,6 @@ app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "survey.html"));
 });
 
+// Add the application routes
+require(path.join(__dirname, './app/routing/apiRoutes'))(app);
+require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
