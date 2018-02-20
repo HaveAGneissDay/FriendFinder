@@ -17,7 +17,7 @@ var friendsArray = [];
 //Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "/assets")));
+app.use(express.static(path.join(__dirname, "/app/public")));
 
 //Routes
 app.get("/", function (req, res) {
@@ -27,3 +27,4 @@ app.get("/", function (req, res) {
 app.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "survey.html"));
 });
+
