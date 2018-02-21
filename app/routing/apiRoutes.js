@@ -11,7 +11,6 @@ app.get('/api/friends', function (req, res) {
 
 var compatableFriends = [];
 app.post('/api/friends', function (req, res) {
-    var compatableFriends =[];
     var userInput = req.body;
     var userResponses = userInput.scores;
     var matchName = '';
