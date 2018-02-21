@@ -1,3 +1,6 @@
+
+
+
 app.post('/api/friends', function (req, res) {
 
     //looping through each object in the friendsArray

@@ -14,6 +14,134 @@
 <body>
     <h1>Survey Questions</h1>
 
+    <!-- CSS FORM GOES HERE  -->
+    <form>
+        <div class="form-group">
+            <label>Enter your Name</label>
+            <input type="email" class="form-control" id="userName" aria-describedby="nameHelp" placeholder="John Smith">
+        </div>
+        <div class="form-group">
+            <label>Link a photo</label>
+            <input type="link" class="form-control" id="userPhoto" placeholder="photo link">
+        </div>
+    </form>
+    <br>
+    <br>
+<h4>For the following questions please indicate how much you agree or disagree with the question (1 = strongly disagree and 5 = strongly agree) </h4>
+<br>
+<br>
+    <!-- Question 1 -->
+<div class="form-group">
+    <label> How much do you like ice cream?</label>
+    <select class="form-control" id="question1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 2 -->
+<div class="form-group">
+    <label> Does pinapple belong on a pizza?</label>
+    <select class="form-control" id="question2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 3 -->
+<div class="form-group">
+    <label> Is Tony Hawk going to coach team USA in 2020 for skateboarding?</label>
+    <select class="form-control" id="question3">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 4 -->
+<div class="form-group">
+    <label> Is a hot dog a sandwich?</label>
+    <select class="form-control" id="question4">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 5 -->
+<div class="form-group">
+    <label> How much do you like long walks on beaches?</label>
+    <select class="form-control" id="question5">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 6 -->
+<div class="form-group">
+    <label> How much do you like team USA?</label>
+    <select class="form-control" id="question6">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 7 -->
+<div class="form-group">
+    <label> How much do you like bacon in the morning?</label>
+    <select class="form-control" id="question7">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 8 -->
+<div class="form-group">
+    <label> How much do you like traveling?</label>
+    <select class="form-control" id="question8">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 9 -->
+<div class="form-group">
+    <label> How much do you like Metalica?</label>
+    <select class="form-control" id="question9">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+    <!-- Question 10 -->
+<div class="form-group">
+    <label> Do you think Tessa Virtue and Scott Moir are a romantic couple?</label>
+    <select class="form-control" id="question10">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</div>
+<button type="button" class="btn btn-primary" id="submitButton"> Submit</button>
+
 <script>
     		$('#submitButton').on('click', function (event) {
                     event.preventDefault();
