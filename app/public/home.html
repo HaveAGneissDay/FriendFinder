@@ -21,8 +21,15 @@
                     <span class="glyphicon glyphicon-plus"></span>Go to Survey</button>
             </a>
         </div>
+
+        <button type="button" class="btn btn-primary" id="submitButton"> Clear Matches</button>
 </body>
 <script>
+
     //Post matches here
+    			$.post('/api/friends', userInput)
+                        .done(function (data) {
+                            $("p").append(data);
+                         }
 </script>
 </html>

@@ -162,6 +162,10 @@
                             $('#question10').val().trim()
                         ]
                     };
+            $.post('/api/friends', userInput)
+                    .done(function (data) {
+                        $("p").append(data);
+                    }
 </script>
 </body>
 
