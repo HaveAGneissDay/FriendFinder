@@ -5,6 +5,7 @@ var path = require('path');
 // Need friends array data
 var friends = require('../data/friends.js');
 
+
 app.get('/api/friends', function (req, res) {
     res.json(friends);
 });
@@ -15,7 +16,7 @@ app.post('/api/friends', function (req, res) {
     var userResponses = userInput.scores;
     var matchName = '';
     var matchImage = '';
-    var totalDifference = 10;
+    var totalDifference = 100;
         //looping through each object in the friendsArray
     for (var i = 0; i < friends.length; i++) {
         // console.log('friend = ' + JSON.stringify(friends[i]));

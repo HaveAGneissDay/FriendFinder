@@ -162,10 +162,16 @@
                             $('#question10').val().trim()
                         ]
                     };
+                })
             $.post('/api/friends', userInput)
                     .done(function (data) {
+                        console.log(data)
                         $("p").append(data);
-                    }
+                    })
+
+                    //PsudoCode for the rest 
+                    // Debug Post and get statements 
+                    // Post on homepage the results
 </script>
 </body>
 
