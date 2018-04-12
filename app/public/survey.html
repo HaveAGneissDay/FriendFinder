@@ -142,6 +142,28 @@
 </div>
 <button type="button" class="btn btn-primary" id="submitButton"> Submit</button>
 
+<!-- Modal -->
+<div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 class="modal-title">
+                    <strong>Best Match</strong>
+                </h2>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchNameforModal"></h2>
+                <img id="modalPhoto" src="" alt="">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+
 <script>
     		$('#submitButton').on('click', function (event) {
                     event.preventDefault();
@@ -162,12 +184,21 @@
                             $('#question10').val().trim()
                         ]
                     };
-                })
-            $.post('/api/friends', userInput)
-                    .done(function (data) {
-                        console.log(data)
-                        $("p").append(data);
-                    })
+            $.post('/api/friends', userInput, function (data) {
+               console.log(data)
+                // $('#userMatch').html(data.matchName);
+                // $('#userMatchImage').attr("src", data.matchImage);
+
+                // $('#modalFriend').modal('open');
+
+                            $("#matchNameforModal").text(data.newFriendName);
+                $("#modalPhoto").attr("src", data.newFriendPhoto);
+                $("#modalPhoto").attr("height", '400px');
+                $("#modalPhoto").attr("width", '550px');
+                // Show the modal with the best match
+                $("#results-modal").modal("toggle");
+            });
+        });
 
                     //PsudoCode for the rest 
                     // Debug Post and get statements 
